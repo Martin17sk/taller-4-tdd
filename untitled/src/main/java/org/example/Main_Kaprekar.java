@@ -12,12 +12,19 @@ public class Main_Kaprekar {
 public static void main(String[] args){
 
 }
-
     public static int kaprekarOp(int num) {
-        if (num == 1000){
-            return 999;
-        }
-        return 3087;
+
+        String numStr = String.valueOf(num);
+        char[] digits = numStr.toCharArray();
+        Arrays.sort(digits);
+        StringBuilder sortedNumDesc = new StringBuilder(new String(digits)).reverse();
+        int numDesc = Integer.parseInt(sortedNumDesc.toString());
+
+        StringBuilder sortedNumAsc = new StringBuilder(new String(digits));
+        int numAsc = Integer.parseInt(sortedNumAsc.toString());
+
+        return numDesc - numAsc;
+
     }
 
     public static int itKaprekar(int num) {
