@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 
 
 
-import static com.example.dev.Main_Kaprekar.*;
+import static org.example.Main_Kaprekar.itKaprekar;
+import static org.example.Main_Kaprekar.kaprekarOp;
 
 public class Test_Kaprekar{
 
