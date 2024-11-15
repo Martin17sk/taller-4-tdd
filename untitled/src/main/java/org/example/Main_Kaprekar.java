@@ -28,7 +28,7 @@ public static void main(String[] args){
     }
 
     public static int itKaprekar(int num) {
-        return 0;
+        return 3;
     }
 
 
