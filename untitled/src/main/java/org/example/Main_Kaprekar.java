@@ -15,6 +15,11 @@ public static void main(String[] args){
     public static int kaprekarOp(int num) {
 
         String numStr = String.valueOf(num);
+
+        while (numStr.length() < 4) {
+            numStr = "0" + numStr;
+        }
+
         char[] digits = numStr.toCharArray();
         Arrays.sort(digits);
         StringBuilder sortedNumDesc = new StringBuilder(new String(digits)).reverse();
@@ -34,9 +39,6 @@ public static void main(String[] args){
         while (result != constant){
             result = kaprekarOp(result);
             cont ++;
-            if (result == 0){
-                break;
-            }
         }
         return cont;
     }
