@@ -28,7 +28,17 @@ public static void main(String[] args){
     }
 
     public static int itKaprekar(int num) {
-        return 3;
+        int constant = 6174;
+        int result = num;
+        int cont= 0;
+        while (result != constant){
+            result = kaprekarOp(result);
+            cont ++;
+            if (result == 0){
+                break;
+            }
+        }
+        return cont;
     }
 
 
